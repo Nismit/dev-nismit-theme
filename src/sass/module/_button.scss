@@ -1,0 +1,192 @@
+/*
+Module Button
+*/
+
+.button {
+  display: inline-block;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--nav {
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #ddd;
+    padding-top: .7em;
+    padding-bottom: .7em;
+    padding-left: 1em;
+
+    &.sub {
+      padding-left: 2em;
+    }
+  }
+
+  &--subscribe {
+    width: 100%;
+    height: 50px;
+    line-height: 100%;
+    padding: 5px 0;
+    color: #fff;
+    font-size: .8rem;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  &--share {
+    width: 47px;
+    padding: 5px 10px;
+    color: #fff;
+
+    span {
+      display: none;
+      //padding-left: 3px;
+    }
+
+    svg {
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  &--rss {
+    background-color: #f26522;
+    border-color: #f26522;
+
+    &:hover {
+      background-color: #fff;
+      color: #f26522;
+
+      svg {
+        fill: #f26522;
+      }
+    }
+  }
+
+  &--feedly {
+    background-color: #2bb24c;
+    border-color: #2bb24c;
+
+    &:hover {
+      background-color: #fff;
+      color: #2bb24c;
+
+      svg {
+        fill: #2bb24c;
+      }
+    }
+  }
+
+  &--twitter {
+    background-color: #1da1f2;
+    border-color: #1da1f2;
+
+    &:hover {
+      background-color: #fff;
+      color: #1da1f2;
+
+      svg {
+        fill: #1da1f2;
+      }
+    }
+  }
+
+  &--facebook {
+    background-color: #3c5a98;
+    border-color: #3c5a98;
+
+    &:hover {
+      background-color: #fff;
+      color: #3c5a98;
+
+      svg {
+        fill: #3c5a98;
+      }
+    }
+  }
+
+  &--pocket {
+    background-color: #f03e56;
+    border-color: #f03e56;
+
+    &:hover {
+      background-color: #fff;
+      color: #f03e56;
+
+      svg {
+        fill: #f03e56;
+      }
+    }
+  }
+
+  &--hatena {
+    background-color: #008fde;
+    border-color: #008fde;
+
+    &:hover {
+      background-color: #fff;
+      color: #008fde;
+
+      svg {
+        fill: #008fde;
+      }
+    }
+  }
+
+  &--github {
+    background-color: #333;
+    border-color: #333;
+
+    &:hover {
+      background-color: #fff;
+      color: #333;
+
+      svg {
+        fill: #333;
+      }
+    }
+  }
+
+}
+
+.toggle {
+  appearance: none;
+
+  &:checked + .nav--child {
+    display: block;
+  }
+
+  &:checked + .nav--global {
+    right: 0;
+
+    & + .nav--close {
+      right: 0;
+    }
+  }
+}
+
+@include getMediaQueryMin('.button','md') {
+  &--nav {
+    width: 100%;
+    display: inline-block;
+    border: 0;
+    padding-top: .7em;
+    padding-bottom: .7em;
+    padding-left: 1em;
+    cursor: pointer;
+
+    &.sub {
+      padding-left: 2em;
+    }
+  }
+
+  &--share {
+    width: 152px;
+
+    span {
+      display: inline-block;
+    }
+  }
+}

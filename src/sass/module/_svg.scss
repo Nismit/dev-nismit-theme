@@ -1,0 +1,35 @@
+/*
+Module Pager
+*/
+
+.icon {
+  width: 25px;
+  height: 25px;
+
+  &--white {
+    fill: #fff;
+  }
+
+  &--small {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 2px;
+  }
+
+  &--logo {
+    height:40px;
+    margin-right: 10px;
+    width:50px;
+    position: relative;
+    top: 3px;
+
+  }
+}
+
+@include getMediaQueryMin('.icon','sm') {
+  &--share {
+    width: 25px;
+    height: 17px;
+  }
+}

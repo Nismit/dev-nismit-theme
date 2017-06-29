@@ -1,0 +1,44 @@
+/*
+Module Search
+*/
+
+.search {
+  &__input {
+    border: 1px solid #ddd;
+    margin: 5%;
+    padding: 4% 3%;
+    position: relative;
+    width: 90%;
+  }
+
+  &__icon {
+    height: 15px;
+    width: 15px;
+  }
+
+  &__submit {
+    background-color: transparent;
+    border: 0;
+    margin-top: 5%;
+    padding: 4%;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    width: 14%;
+  }
+}
+
+@include getMediaQueryMin('.search','sm') {
+  &__input {
+    border: 1px solid #ddd;
+    margin: 0;
+    padding: 4% 3%;
+    position: relative;
+    width: 300px;
+  }
+
+  &__submit {
+    margin-top: 0;
+    right: 0;
+  }
+}

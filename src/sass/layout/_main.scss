@@ -1,0 +1,42 @@
+//
+// Layout section
+//
+
+.l-main {
+  width: 100%;
+  padding-left: .6em;
+  padding-right: .6em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// PC
+@include getMediaQueryMin('.l-main','md') {
+  padding-left: 6em;
+  padding-right: 6em;
+}
+
+.l-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// PC
+@include getMediaQueryMin('.l-posts','md') {
+  width: 68%;
+}
+
+.l-aside {
+  width: 100%;
+}
+
+// PC
+@include getMediaQueryMin('.l-aside','md') {
+  width: 28%;
+  margin-left: 4%;
+}
+
+.l-page {
+  margin-bottom: 2em;
+}

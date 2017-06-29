@@ -1,0 +1,32 @@
+/*
+Module List Style
+
+Style for side bar
+*/
+
+.list {
+  &__item {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+
+    a {
+      display: inline-block;
+      width: 100%;
+    }
+
+    img {
+      float: left;
+    }
+
+    p {
+      float: right;
+      width: 75%;
+      margin: 0;
+
+      span {
+        float: right;
+      }
+    }
+  }
+}

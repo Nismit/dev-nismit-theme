@@ -1,0 +1,63 @@
+//
+// style.scss will be output style.css (compressed)
+// It includes all of scss files, so partial files should import in this file..
+//
+
+@charset "utf-8";
+
+// Variables
+@import 'foundation/variable/breakpoints';
+@import 'foundation/variable/color';
+@import 'foundation/variable/easing';
+@import 'foundation/variable/font';
+@import 'foundation/variable/others';
+
+// Function for Sass
+@import 'foundation/function/em-calc';
+@import 'foundation/function/strip-unit';
+
+// Mixins
+@import 'foundation/mixin/clearfix';
+@import 'foundation/mixin/flex';
+@import 'foundation/mixin/font-size';
+@import 'foundation/mixin/mediaquery';
+
+// Above files are defined for SASS before import initial files
+
+// Reset Style (You can choose reset or normalize, but default is normalize)
+//@import 'foundation/base/_reset';
+@import 'foundation/base/normalize';
+
+// Inital Website Settings
+@import 'foundation/base/init';
+
+// Utility
+@import 'foundation/utility/keyframes';
+@import 'foundation/utility/bg-color';
+@import 'foundation/utility/display';
+@import 'foundation/utility/float';
+@import 'foundation/utility/margin';
+@import 'foundation/utility/padding';
+@import 'foundation/utility/text';
+
+// Layout
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
+
+// Modules
+@import 'module/title';
+@import 'module/nav';
+@import 'module/button';
+@import 'module/block';
+@import 'module/card';
+@import 'module/format';
+@import 'module/table-contents';
+@import 'module/svg';
+@import 'module/counter';
+@import 'module/notice';
+@import 'module/meta';
+@import 'module/sponsored';
+@import 'module/intractive';
+@import 'module/search';
+@import 'module/list';

@@ -1,0 +1,51 @@
+/*
+Module Card
+
+Card Layout Style
+*/
+
+.card {
+  border: 1px solid #e6e6e6;
+  width: 100%;
+  margin-top: 2em;
+  position: relative;
+
+  a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+  }
+
+  &__description {
+    padding: 0 1em 4em 1em;
+
+    p {
+      margin: .5em 0;
+    }
+
+    ul {
+      position: absolute;
+      right: 1em;
+      bottom: .6em;
+    }
+  }
+
+  &:nth-of-type(1) {
+    margin-top: 0;
+  }
+}
+
+// PC
+@include getMediaQueryMin('.card','sm') {
+  width: 48%;
+  margin-top: 4%;
+
+  &:nth-of-type(1), &:nth-of-type(2) {
+    margin-top: 0;
+  }
+
+  &:nth-of-type(even) {
+    margin-left: 4%;
+  }
+}
+

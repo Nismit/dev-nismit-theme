@@ -1,0 +1,18 @@
+//
+// Layout footer
+//
+
+.l-footer {
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  background-color: #f2f2f2;
+}
+
+// PC
+@include getMediaQueryMin('.l-footer','md') {
+  padding-left: 4em;
+  padding-right: 4em;
+}

@@ -1,0 +1,25 @@
+/*
+Module Block
+
+This module is a common
+*/
+
+.block {
+  margin-bottom: 2em;
+
+  &__title {
+    margin-bottom: 1em;
+  }
+
+  &--posts {
+    a, span {
+      display: block;
+    }
+
+    span {
+      text-align: right;
+      font-size: .9rem;
+    }
+  }
+}
+
