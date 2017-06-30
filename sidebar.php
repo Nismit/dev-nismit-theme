@@ -14,7 +14,7 @@
 		<h3 class="block__title">Follow Me</h3>
 
 		<ul class="nav">
-			<li class="nav__item nav__item--half"><a href="<?php echo esc_url( home_url( '/' ) ); ?>feed" target="_blank" class="button button--subscribe button--rss"><svg class="icon icon--white"><use xlink:href="#icon-feed"/></svg><br>RSS</a></li><li class="nav__item nav__item--half"><a href="#" class="button button--subscribe  button--feedly"><svg class="icon icon--white"><use xlink:href="#icon-feedly"/></svg><br>Feedly</a></li>
+			<li class="nav__item nav__item--half"><a href="<?php echo esc_url( home_url( '/' ) ); ?>feed" target="_blank" class="button button--subscribe button--rss"><svg class="icon icon--white"><use xlink:href="#icon-feed"/></svg><br>RSS</a></li><li class="nav__item nav__item--half"><a href="https://feedly.com/i/subscription/feed/https://dev.nismit.me/feed" target="_blank" class="button button--subscribe  button--feedly"><svg class="icon icon--white"><use xlink:href="#icon-feedly"/></svg><br>Feedly</a></li>
 			<li class="nav__item nav__item--half"><a href="https://twitter.com/nismit_" target="_blank" class="button button--subscribe  button--twitter"><svg class="icon icon--white"><use xlink:href="#icon-twitter"/></svg><br>Twitter</a></li><li class="nav__item nav__item--half"><a href="https://github.com/Nismit" target="_blank" class="button button--subscribe  button--github"><svg class="icon icon--white"><use xlink:href="#icon-github"/></svg><br>Github</a></li>
 		</ul>
 	</div>
