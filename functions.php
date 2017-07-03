@@ -82,6 +82,29 @@ function disable_emojis() {
 add_action( 'init', 'disable_emojis' );
 
 /**
+* Add function of table plugin to TinyMCE
+*
+* @param array() - plugin cdn url
+* @see https://codex.wordpress.org/TinyMCE#Change_Log
+* @see https://cdnjs.com/libraries/tinymce/
+*/
+function plugin_table_mce( $plugins ) {
+	$plugins['table'] = '//cdnjs.cloudflare.com/ajax/libs/tinymce/4.6.2/plugins/table/plugin.min.js';
+	return $plugins;
+}
+add_filter('mce_external_plugins', 'plugin_table_mce');
+
+/**
+* Add button(s) in visual editor
+* @param array() - button title
+*/
+function add_buttons_mce( $buttons ) {
+	$buttons[] = 'table';
+	return $buttons;
+}
+add_filter( 'mce_buttons', 'add_buttons_mce' );
+
+/**
 * Filter function used to remove the tinymce emoji plugin.
 *
 * @param    array  $plugins
@@ -230,22 +253,11 @@ function get_tags_from_category( $args ) {
 		return $tags;
 }
 
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-//require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-//require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-//require get_template_directory() . '/inc/customizer.php';
+function code_view_shortcode( $atts, $content = null ) {
+    extract( shortcode_atts( array(
+        'caption' => 'filename',
+				'lang' => 'lang'
+    ), $atts ) );
+		return '<pre><span class="caption">'. esc_attr($caption) .'</span><code class="language-'. esc_attr($lang) .'">'. $content .'</code></pre>';
+}
+add_shortcode('source', 'code_view_shortcode');
