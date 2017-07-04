@@ -58,10 +58,15 @@
 	</div>
 
 	<div class="post__content">
-		<!--div class="notice">
+		<?php
+			$diff =  human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) ;
+			if( strpos( $diff, '年' ) != 0 && str_replace( '年', '', $diff ) >= 1 ) :
+		?>
+		<div class="notice">
 			<p>この記事は最終更新日から1年以上経過しています。<br>
 			古くなっている場合、コメントもしくはTwitterまでご連絡いただけると幸いです。</p>
-		</div-->
+		</div>
+		<?php endif; ?>
 
 		<?php the_content(); ?>
 
