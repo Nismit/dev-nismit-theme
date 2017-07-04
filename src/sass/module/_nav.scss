@@ -144,9 +144,12 @@ Module Navigation
 
   &--share {
     margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__item {
-      margin-right: 9px;
+      margin-right: 5.5%;
 
       &:last-child {
         margin-right: 0;
