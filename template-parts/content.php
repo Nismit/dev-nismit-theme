@@ -36,6 +36,10 @@
 		</ul>
 	</div>
 
+	<div>
+		<?php the_excerpt(); ?>
+	</div>
+
 	<!--div class="table-contents">
 		<h2 class="table-contents__title">目次</h2>
 		<ol>
