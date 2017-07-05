@@ -50,13 +50,14 @@
 					foreach( $categories as $key => $category ) :
 						echo '<li><label for="cat'. $key .'" class="button--nav">'. $category->name .'</label><input type="checkbox" name="toggle" id="cat'. $key .'" class="toggle" />';
 						$tags = get_tags_from_category( $category );
-						if( !empty($tags)):
 						echo '<ul class="nav--child">';
-							foreach( $tags as $tag ):
-								echo '<li><a href="'. esc_url( $tag->link ) .'" class="button--nav sub" rel="tag">'. esc_html( $tag->name ) .'</a></li>';
-							endforeach;
+							echo '<li><a href="'. esc_url( home_url( '/' ) ) .'category/'. $category->slug .'" class="button--nav sub">'. esc_html( $category->name ) .'一覧</a></li>';
+							if( !empty($tags) ):
+								foreach( $tags as $tag ):
+									echo '<li><a href="'. esc_url( $tag->link ) .'" class="button--nav sub" rel="tag">'. esc_html( $tag->name ) .'</a></li>';
+								endforeach;
+							endif;
 						echo '</ul>';
-						endif;
 						echo '</li>';
 					endforeach;
 				?>
