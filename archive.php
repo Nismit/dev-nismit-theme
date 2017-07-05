@@ -12,7 +12,7 @@ get_header(); ?>
 <main class="l-main">
 	<div class="l-posts">
 
-		<?php the_archive_title( '<h1 class="title--taxonomy">Category:', '</h1>' ); ?>
+		<?php the_archive_title( '<h1 class="title--taxonomy">', '</h1>' ); ?>
 
 		<div class="l-cards">
 		<?php
