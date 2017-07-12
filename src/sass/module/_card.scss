@@ -16,6 +16,13 @@ Card Layout Style
     text-decoration: none;
   }
 
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
   &__description {
     padding: 0 1em 4em 1em;
 
@@ -48,4 +55,3 @@ Card Layout Style
     margin-left: 4%;
   }
 }
-

@@ -9,5 +9,10 @@ Module Post Meta
     margin: 0;
   }
 }
-  
 
+.post--thumbnail {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

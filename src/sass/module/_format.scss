@@ -9,7 +9,7 @@ Typhography/Link/Image/Table
   margin-bottom: 3em;
 
   h2 {
-    margin: 1em 0;
+    margin: 2em 0 1em;
     padding: .3em 0 .3em .4em;
     border-left: 5px solid #feac5e;
     font-size: 1.7rem;
@@ -19,9 +19,14 @@ Typhography/Link/Image/Table
   h3 {
     font-size: 1.2rem;
     line-height: 130%;
+    margin-top: 1.5em;
     margin-bottom: .5em;
     padding-bottom: .4em;
     border-bottom: 3px solid #69d2e7;
+  }
+
+  h2+h3 {
+    margin-top: 0;
   }
 
   h4 {

@@ -17,6 +17,12 @@ Module Pager
     top: 2px;
   }
 
+  &--menu {
+    width: 32px;
+    height: 39px;
+    cursor: pointer;
+  }
+
   &--logo {
     height:40px;
     margin-right: 10px;

@@ -10,6 +10,10 @@
   flex-wrap: wrap;
 }
 
+.l-posts {
+  max-width: 100%;
+}
+
 // PC
 @include getMediaQueryMin('.l-main','md') {
   padding-left: 6em;

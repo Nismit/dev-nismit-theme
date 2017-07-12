@@ -51,6 +51,15 @@ pre[class*="language-"] {
 	padding: 1em;
 	margin: .5em 0;
 	overflow: auto;
+	position: relative;
+
+	.caption {
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: rgba(195, 195, 195, 0.8);
+		padding: .1em .4em;
+	}
 }
 
 :not(pre) > code[class*="language-"],
