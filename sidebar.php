@@ -44,7 +44,11 @@
 			<?php foreach($posts_array as $post ) : setup_postdata( $post ); ?>
 			<li class="list__item clearfix">
 				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-					<img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=1500%C3%97700&w=150&h=150" width="70" alt="">
+					<?php if ( has_post_thumbnail() ) :
+						the_post_thumbnail('thumbnail');
+					else :
+						echo '<img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=1500%C3%97700&w=150&h=150" alt="Test" width="70" height="auto">';
+					endif; ?>
 					<p><?php the_title(); ?><br>
 					<span><?php echo get_post_meta( $post->ID, '_views_count', true ); ?> Views</span></p>
 				</a>
@@ -70,7 +74,11 @@
 			<?php foreach($posts_array as $post ) : setup_postdata( $post ); ?>
 			<li class="list__item clearfix">
 				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-					<img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=1500%C3%97700&w=150&h=150" width="70" alt="">
+					<?php if ( has_post_thumbnail() ) :
+						the_post_thumbnail('thumbnail');
+					else :
+						echo '<img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=1500%C3%97700&w=150&h=150" alt="Test" width="70" height="auto">';
+					endif; ?>
 					<p><?php the_title(); ?><br>
 					<span>Updated: <?php the_modified_date( 'Y/m/d' ) ?></span></p>
 				</a>
