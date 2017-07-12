@@ -36,7 +36,7 @@
 			if(!empty( $categories )) :
 		?>
 
-		<label for="globalNav" class="nav--button"><svg class="icon icon--small"><use xlink:href="#icon-bars"/></svg></label><input type="checkbox" name="toggle" id="globalNav" class="toggle" />
+		<label for="globalNav" class="nav--button"><svg class="icon icon--menu"><use xlink:href="#icon-bars"/></svg></label><input type="checkbox" name="toggle" id="globalNav" class="toggle" />
 
 		<nav class="nav--global">
 			<ul class="nav--parent">
