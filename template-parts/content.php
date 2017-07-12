@@ -22,7 +22,7 @@
 		<p class="u-text-right"><span><svg class="icon icon--small"><use xlink:href="#icon-eye"/></svg>&nbsp;<?php echo get_post_meta( $post->ID, '_views_count', true ); ?></span></p>
 	</div>
 
-	<figure>
+	<figure class="post--thumbnail">
 		<?php if ( has_post_thumbnail() ) :
 			the_post_thumbnail();
 		else :
@@ -32,7 +32,7 @@
 
 	<div>
 		<ul class="nav nav--share">
-			<li class="nav__item nav--share__item"><a href="https://twitter.com/share?text=<?php the_title(); ?>&url=<?php the_permalink(); ?>" target="_blank" class="button button--share button--twitter"><svg class="icon icon--share icon--white"><use xlink:href="#icon-twitter"/></svg><span>&nbsp;Twitter</span><span class="counter">123</span></a></li><li class="nav__item nav--share__item"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" class="button button--share button--facebook"><svg class="icon icon--share icon--white"><use xlink:href="#icon-facebook"/></svg><span>&nbsp;Facebook</span><span class="counter">12</span></a></li><li class="nav__item nav--share__item"><a href="https://getpocket.com/edit?url=<?php the_permalink(); ?>&title=<?php echo urlencode( get_the_title() ); ?>" target="_blank" class="button button--share button--pocket"><svg class="icon icon--share icon--white"><use xlink:href="#icon-get-pocket"/></svg><span>&nbsp;Pocket</span><span class="counter">12</span></a></li><li class="nav__item nav--share__item"><a href="https://b.hatena.ne.jp/entry/<?php the_permalink(); ?>" target="_blank" class="button button--share button--hatena"><svg class="icon icon--share icon--white"><use xlink:href="#icon-hatena"/></svg><span>&nbsp;Hatena</span><span class="counter">12</span></a></li><li class="nav__item nav--share__item"><a href="https://feedly.com/i/subscription/feed/<?php echo esc_url( home_url( '/' ) ); ?>feed" target="_blank" class="button button--share button--feedly"><svg class="icon icon--share icon--white"><use xlink:href="#icon-feedly"/></svg><span>&nbsp;Feedly</span><span class="counter">12</span></a></li>
+			<li class="nav__item nav--share__item"><a href="https://twitter.com/share?text=<?php the_title(); ?>&url=<?php the_permalink(); ?>" target="_blank" class="button button--share button--twitter"><svg class="icon icon--share icon--white"><use xlink:href="#icon-twitter"/></svg><span>&nbsp;Twitter</span></a></li><li class="nav__item nav--share__item"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" class="button button--share button--facebook"><svg class="icon icon--share icon--white"><use xlink:href="#icon-facebook"/></svg><span>&nbsp;Facebook</span></a></li><li class="nav__item nav--share__item"><a href="https://getpocket.com/edit?url=<?php the_permalink(); ?>&title=<?php echo urlencode( get_the_title() ); ?>" target="_blank" class="button button--share button--pocket"><svg class="icon icon--share icon--white"><use xlink:href="#icon-get-pocket"/></svg><span>&nbsp;Pocket</span></a></li><li class="nav__item nav--share__item"><a href="https://b.hatena.ne.jp/entry/<?php the_permalink(); ?>" target="_blank" class="button button--share button--hatena"><svg class="icon icon--share icon--white"><use xlink:href="#icon-hatena"/></svg><span>&nbsp;Hatena</span></a></li><li class="nav__item nav--share__item"><a href="https://feedly.com/i/subscription/feed/<?php echo esc_url( home_url( '/' ) ); ?>feed" target="_blank" class="button button--share button--feedly"><svg class="icon icon--share icon--white"><use xlink:href="#icon-feedly"/></svg><span>&nbsp;Feedly</span></a></li>
 		</ul>
 	</div>
 
@@ -52,8 +52,16 @@
 
 	<div class="sponsored">
 		<p class="u-text-center">Sponsored</p>
-		<div style="height: 120px; background-color: #ccc;">
-
+		<div style="height: 100px;">
+			<!-- [DEV]目次下 -->
+			<!-- <ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-6436791468025792"
+			     data-ad-slot="7789266862"
+			     data-ad-format="auto"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script> -->
 		</div>
 	</div>
 
