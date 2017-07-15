@@ -253,11 +253,16 @@ function get_tags_from_category( $args ) {
 		return $tags;
 }
 
-function code_view_shortcode( $atts, $content = null ) {
+function source_view_shortcode( $atts, $content = null ) {
     extract( shortcode_atts( array(
         'caption' => 'filename',
 				'lang' => 'lang'
     ), $atts ) );
-		return '<pre><span class="caption">'. esc_attr($caption) .'</span><code class="language-'. esc_attr($lang) .'">'. $content .'</code></pre>';
+		return '<span class="caption">'. esc_attr($caption) .'</span><code class="language-'. esc_attr($lang) .'">'. $content .'</code>';
 }
-add_shortcode('source', 'code_view_shortcode');
+add_shortcode('source', 'source_view_shortcode');
+
+function code_view_shortcode( $atts, $content = null ) {
+		return '<code>'. $content .'</code>';
+}
+add_shortcode('code', 'code_view_shortcode');
