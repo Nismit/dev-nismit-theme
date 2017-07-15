@@ -3,7 +3,10 @@ Module Post Meta
 */
 
 .post--meta {
-  padding-bottom: 10px;
+  padding: 5px 0;
+  margin: 10px 0;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
 
   p {
     margin: 0;
@@ -13,6 +16,7 @@ Module Post Meta
 .post--thumbnail {
   img {
     width: 100%;
+    max-width: 100%;
     height: auto;
   }
 }
