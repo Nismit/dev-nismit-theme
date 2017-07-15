@@ -12,16 +12,6 @@
 <article class="post">
 	<?php the_title( '<h1 class="title--post">', '</h1>' ); ?>
 
-	<div class="post--meta">
-		<ul class="nav u-text-right">
-			<?php if ( get_the_modified_date('Y/n/j') != get_the_time('Y/n/j') ) : ?>
-			<li class="nav__item"><time class="updated" datetime="<?php the_modified_date( 'c' ) ?>"><svg class="icon icon--small"><use xlink:href="#icon-refresh"/></svg>&nbsp;<?php the_modified_date( 'Y/m/d' ) ?></time>&nbsp;</li>
-			<?php endif; ?>
-			<li class="nav__item"><time class="published" datetime="<?php echo the_time( 'c' ) ?>"><svg class="icon icon--small"><use xlink:href="#icon-calendar"/></svg>&nbsp;<?php echo the_time( 'Y/m/d' ) ?></time></li>
-		</ul>
-		<p class="u-text-right"><span><svg class="icon icon--small"><use xlink:href="#icon-eye"/></svg>&nbsp;<?php echo get_post_meta( $post->ID, '_views_count', true ); ?></span></p>
-	</div>
-
 	<figure class="post--thumbnail">
 		<?php if ( has_post_thumbnail() ) :
 			the_post_thumbnail();
@@ -29,6 +19,23 @@
 			echo '<img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=1500%C3%97400&w=1500&h=700" alt="Test" width="100%" height="auto">';
 		endif; ?>
 	</figure>
+
+	<div class="post--meta">
+		<ul class="nav u-text-right">
+			<?php if ( get_the_modified_date('Y/n/j') != get_the_time('Y/n/j') ) : ?>
+			<li class="nav__item"><time class="updated" datetime="<?php the_modified_date( 'c' ) ?>"><svg class="icon icon--small"><use xlink:href="#icon-refresh"/></svg>&nbsp;<?php the_modified_date( 'Y/m/d' ) ?></time>&nbsp;</li>
+			<?php endif; ?>
+			<li class="nav__item"><time class="published" datetime="<?php echo the_time( 'c' ) ?>"><svg class="icon icon--small"><use xlink:href="#icon-calendar"/></svg>&nbsp;<?php echo the_time( 'Y/m/d' ) ?></time></li>
+		</ul>
+		<?php
+			$category = get_the_category();
+			$tags = get_the_tags();
+		?>
+		<ul class="nav u-text-right">
+			<li class="nav__item u-mr-15"><svg class="icon icon--small"><use xlink:href="#icon-<?php echo $category[0]->slug; ?>"/></svg>&nbsp;<a href="<?php echo esc_url( home_url( '/' ).'category/'.$category[0]->slug ); ?>"><?php echo esc_html( $category[0]->name ); ?></a></li>
+			<li class="nav__item"><svg class="icon icon--small"><use xlink:href="#icon-tag"/></svg>&nbsp;<a href="<?php echo esc_url( home_url( '/' ).'tag/'.$tags[0]->slug ); ?>"><?php echo esc_html( $tags[0]->name ); ?></a></li>
+		</ul>
+	</div>
 
 	<div>
 		<ul class="nav nav--share">
