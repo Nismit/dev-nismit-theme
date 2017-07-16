@@ -29,6 +29,11 @@
   }
 }
 
+@include getMediaQueryMin('.l-header','sm') {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
 // PC
 @include getMediaQueryMin('.l-header','md') {
   padding-left: 4em;

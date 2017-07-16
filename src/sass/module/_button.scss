@@ -183,10 +183,18 @@ Module Button
   }
 
   &--share {
-    width: 152px;
+    width: 103px;
+    padding: 5px 0;
 
     span {
       display: inline-block;
     }
+  }
+}
+
+@include getMediaQueryMin('.button','md') {
+  &--share {
+    width: 152px;
+    padding: 5px 10px;
   }
 }
