@@ -38,12 +38,13 @@ gulp.task("sass", function() {
 	gulp.src("src/sass/**/*.scss")
 		.pipe(plumber())
 		.pipe(gulpif(!isProduction, sourcemaps.init()))
-		.pipe(sass())
+		.pipe(gulpif(!isProduction, sass()))
+		.pipe(gulpif(isProduction, sass({outputStyle: 'compressed'})))
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-		.pipe(gulpif(isProduction, comb()))
+		//.pipe(gulpif(isProduction, comb()))
 		.pipe(gulpif(!isProduction, sourcemaps.write()))
 		.pipe(gulp.dest("./dist/styles/"))
 		.pipe(browser.reload({ stream:true }))
