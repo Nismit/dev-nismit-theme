@@ -167,7 +167,7 @@ Module Button
   }
 }
 
-@include getMediaQueryMin('.button','md') {
+@include getMediaQueryMin('.button','sm') {
   &--nav {
     width: 100%;
     display: inline-block;
