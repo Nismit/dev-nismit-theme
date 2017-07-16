@@ -32,8 +32,8 @@
 			$tags = get_the_tags();
 		?>
 		<ul class="nav u-text-right">
-			<li class="nav__item u-mr-15"><svg class="icon icon--small"><use xlink:href="#icon-<?php echo $category[0]->slug; ?>"/></svg>&nbsp;<a href="<?php echo esc_url( home_url( '/' ).'category/'.$category[0]->slug ); ?>"><?php echo esc_html( $category[0]->name ); ?></a></li>
-			<li class="nav__item"><svg class="icon icon--small"><use xlink:href="#icon-tag"/></svg>&nbsp;<a href="<?php echo esc_url( home_url( '/' ).'tag/'.$tags[0]->slug ); ?>"><?php echo esc_html( $tags[0]->name ); ?></a></li>
+			<li class="nav__item"><svg class="icon icon--small"><use xlink:href="#icon-<?php echo $category[0]->slug; ?>"/></svg>&nbsp;<a href="<?php echo esc_url( home_url( '/' ).'category/'.$category[0]->slug ); ?>"><?php echo esc_html( $category[0]->name ); ?></a></li>
+			<?php if ( !empty($tags) ): ?> <li class="nav__item u-ml-15"><svg class="icon icon--small"><use xlink:href="#icon-tag"/></svg>&nbsp;<a href="<?php echo esc_url( home_url( '/' ).'tag/'.$tags[0]->slug ); ?>"><?php echo esc_html( $tags[0]->name ); ?></a></li><?php endif; ?>
 		</ul>
 	</div>
 
