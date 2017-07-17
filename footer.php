@@ -12,7 +12,7 @@
 ?>
 
 <footer class="l-footer">
-	<p class="u-display-inline-block">&copy; 2017 DEV.NM</p>
+	<p class="u-display-inline-block">&copy; 2017 DEV.NISMIT</p>
 </footer>
 
 <svg class="defs"><defs>
