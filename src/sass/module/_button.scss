@@ -153,6 +153,7 @@ Module Button
 
 .toggle {
   appearance: none;
+  display: none;
 
   &:checked + .nav--child {
     display: block;
