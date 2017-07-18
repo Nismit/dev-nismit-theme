@@ -11,7 +11,7 @@
 
 <div class="l-page">
 	<?php
-		the_title();
+		the_title( '<h1 class="title--page">', '</h1>' );
 
 		the_content();
 	?>
